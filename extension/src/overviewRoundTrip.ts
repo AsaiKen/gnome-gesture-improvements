@@ -63,7 +63,7 @@ export class OverviewRoundTripGestureExtension implements ISubExtension {
 
 		this._swipeTracker = createSwipeTracker(
 			global.stage,
-			(ExtSettings.DEFAULT_OVERVIEW_GESTURE ? [3] : [4]),
+			[2],
 			Shell.ActionMode.NORMAL | Shell.ActionMode.OVERVIEW,
 			Clutter.Orientation.VERTICAL,
 			ExtSettings.DEFAULT_OVERVIEW_GESTURE_DIRECTION,

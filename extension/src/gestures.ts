@@ -84,7 +84,7 @@ class WorkspaceAnimationModifier extends SwipeTrackerEndPointsModifer {
 		this._workspaceAnimation = wm._workspaceAnimation;
 		this._swipeTracker = createSwipeTracker(
 			global.stage,
-			(ExtSettings.DEFAULT_SESSION_WORKSPACE_GESTURE ? [3] : [4]),
+			[2],
 			Shell.ActionMode.NORMAL,
 			Clutter.Orientation.HORIZONTAL,
 			ExtSettings.FOLLOW_NATURAL_SCROLL,
