@@ -45,7 +45,7 @@ export class AltTabGestureExtension implements ISubExtension {
 		this._connectHandlers = [];
 
 		this._touchpadSwipeTracker = new TouchpadSwipeGesture(
-			[2],
+			(ExtSettings.DEFAULT_SESSION_WORKSPACE_GESTURE ? [4] : [2]),
 			Shell.ActionMode.ALL,
 			Clutter.Orientation.HORIZONTAL,
 			false,

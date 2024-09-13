@@ -143,7 +143,7 @@ export class GestureExtension implements ISubExtension {
 		this._swipeTrackers = [
 			{
 				swipeTracker: Main.overview._overview._controls._workspacesDisplay._swipeTracker,
-				nfingers: [2],
+				nfingers: [2, 4],
 				disableOldGesture: true,
 				followNaturalScroll: ExtSettings.FOLLOW_NATURAL_SCROLL,
 				modes: Shell.ActionMode.OVERVIEW,
@@ -152,7 +152,7 @@ export class GestureExtension implements ISubExtension {
 					if (Main.overview._overview._controls._searchController.searchActive) {
 						return false;
 					}
-					if (event.get_touchpad_gesture_finger_count() === 2) {
+					if (event.get_touchpad_gesture_finger_count() === 4) {
 						return true;
 					} else {
 						return this._stateAdjustment.value === OverviewControlsState.WINDOW_PICKER;

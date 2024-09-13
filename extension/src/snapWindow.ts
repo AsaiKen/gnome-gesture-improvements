@@ -284,7 +284,7 @@ export class SnapWindowExtension implements ISubExtension {
 	constructor() {
 		this._swipeTracker = createSwipeTracker(
 			global.stage,
-			[2],
+			(ExtSettings.DEFAULT_OVERVIEW_GESTURE ? [4] : [2]),
 			Shell.ActionMode.NORMAL,
 			Clutter.Orientation.VERTICAL,
 			true,
