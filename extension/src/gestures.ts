@@ -152,7 +152,7 @@ export class GestureExtension implements ISubExtension {
 					if (Main.overview._overview._controls._searchController.searchActive) {
 						return false;
 					}
-					if (event.get_touchpad_gesture_finger_count() === 4) {
+					if (event.get_touchpad_gesture_finger_count() === 2) {
 						return true;
 					} else {
 						return this._stateAdjustment.value === OverviewControlsState.WINDOW_PICKER;
