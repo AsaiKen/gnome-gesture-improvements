@@ -4,7 +4,6 @@ import Meta from '@gi-types/meta';
 
 import { imports, global } from 'gnome-shell';
 
-import { ExtSettings } from '../constants';
 import { ArrowIconAnimation } from './animations/arrow';
 import { createSwipeTracker } from './swipeTracker';
 import { getVirtualKeyboard, IVirtualKeyboard } from './utils/keyboard';
@@ -48,7 +47,7 @@ export class ForwardBackGestureExtension implements ISubExtension {
 
 		this._swipeTracker = createSwipeTracker(
 			global.stage,
-			ExtSettings.DEFAULT_SESSION_WORKSPACE_GESTURE ? [4] : [2],
+			[2],
 			Shell.ActionMode.NORMAL,
 			Clutter.Orientation.HORIZONTAL,
 			false,
