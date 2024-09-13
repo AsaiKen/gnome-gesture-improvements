@@ -84,7 +84,7 @@ class WorkspaceAnimationModifier extends SwipeTrackerEndPointsModifer {
 		this._workspaceAnimation = wm._workspaceAnimation;
 		this._swipeTracker = createSwipeTracker(
 			global.stage,
-			[2],
+			(ExtSettings.DEFAULT_SESSION_WORKSPACE_GESTURE ? [2] : [4]),
 			Shell.ActionMode.NORMAL,
 			Clutter.Orientation.HORIZONTAL,
 			ExtSettings.FOLLOW_NATURAL_SCROLL,
@@ -143,7 +143,7 @@ export class GestureExtension implements ISubExtension {
 		this._swipeTrackers = [
 			{
 				swipeTracker: Main.overview._overview._controls._workspacesDisplay._swipeTracker,
-				nfingers: [2, 4],
+				nfingers: [2, 3, 4],
 				disableOldGesture: true,
 				followNaturalScroll: ExtSettings.FOLLOW_NATURAL_SCROLL,
 				modes: Shell.ActionMode.OVERVIEW,
@@ -161,7 +161,7 @@ export class GestureExtension implements ISubExtension {
 			},
 			{
 				swipeTracker: Main.overview._overview._controls._appDisplay._swipeTracker,
-				nfingers: [2],
+				nfingers: [2, 3],
 				disableOldGesture: true,
 				followNaturalScroll: ExtSettings.FOLLOW_NATURAL_SCROLL,
 				modes: Shell.ActionMode.OVERVIEW,
