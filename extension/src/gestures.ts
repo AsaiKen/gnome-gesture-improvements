@@ -161,7 +161,7 @@ export class GestureExtension implements ISubExtension {
 			},
 			{
 				swipeTracker: Main.overview._overview._controls._appDisplay._swipeTracker,
-				nfingers: [3],
+				nfingers: [2],
 				disableOldGesture: true,
 				followNaturalScroll: ExtSettings.FOLLOW_NATURAL_SCROLL,
 				modes: Shell.ActionMode.OVERVIEW,
